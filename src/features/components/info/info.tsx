@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { AppContext } from '../../context/app.context';
+import { AppContext } from '../../../context/app.context';
+
 export function Info() {
   const { isCall } = useContext(AppContext);
   return (

@@ -1,10 +1,11 @@
 import { useContext } from 'react';
-import { AppContext } from '../../context/app.context';
+import { AppContext } from '../../../context/app.context';
+
 export function Action() {
   const { isActiveCall, setCall, setActiveCall, setPhoneNumber } =
     useContext(AppContext);
 
-  const handleClickToCall = () => {
+  const handleClick = () => {
     setCall(true);
 
     setTimeout(() => {
@@ -16,17 +17,17 @@ export function Action() {
 
   return (
     <>
-      {/* {isActiveCall ? (
-        <a href="#" className="call active" onClick={() => handleClickToCall()}>
+      {isActiveCall ? (
+        <a href="#" className="call active" onClick={() => handleClick()}>
           Call
         </a>
       ) : (
-        <a href="#" className="hang active" onClick={() => handleClickToHang()}>
+        <a href="#" className="hang active" onClick={() => handleClick()}>
           Hang
         </a>
-      )} */}
+      )}
       {isActiveCall && (
-        <a href="#" className="call active" onClick={() => handleClickToCall()}>
+        <a href="#" className="call active" onClick={() => handleClick()}>
           Call
         </a>
       )}
